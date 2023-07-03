@@ -4,11 +4,13 @@ import {F1Info} from "./F1Info";
 import {InformationTemplate} from "./interfaces";
 import {CountClicks} from "./CountClicks";
 import {ComplexCountClicks} from "./ComplexCountClicks";
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import {NotFound} from "./NotFound";
 
 function App() {
 
     const logo: string = 'https://assets.stickpng.com/thumbs/61fc02163cf0e70004222072.png'
-    const title: string = 'The pinnacle of motorsport';
+    const title: string = 'THE PINNACLE OF MOTORSPORT';
     const firstParagraph: string = 'Formula 1 is the highest class of international racing for open-wheel single-seater formula racing cars sanctioned by the FIA.\n';
     const secondParagraph: string = 'Formula One cars are the fastest regulated road-course racing cars in the world,\n' +
         '            owing to very high cornering speeds achieved through generating large amounts of\n' +
@@ -25,14 +27,17 @@ function App() {
     }
 
     return (
-        <div className="App">
-            <header className="App-header">
-                <F1Info {...infoTemplate}/>
-                <CountClicks/>
-                <ComplexCountClicks/>
-            </header>
+        <div className="App App-header">
+            <Router>
+                <Routes>
+                    <Route path="/counter" element={<CountClicks/>} />
+                    <Route path="/complex-counter" element={<ComplexCountClicks />}/>
+                    <Route path="/" element={<F1Info {...infoTemplate} />} />
+                    <Route path="*" element={<NotFound />} />
+                </Routes>
+            </Router>
         </div>
-    );
+    )
 }
 
 export default App;
