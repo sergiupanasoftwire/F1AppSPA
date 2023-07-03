@@ -1,0 +1,50 @@
+.App {
+    text-align: center;
+}
+
+.F1-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .F1-logo {
+        animation: F1-logo-pulse infinite 5s linear;
+    }
+}
+
+.F1-header {
+    background-color: #ff0000;
+    min-height: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: #000000;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+@keyframes F1-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes F1-logo-pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
