@@ -11,3 +11,10 @@ export interface ClicksState {
     clicks: number;
     setClicks: Dispatch<SetStateAction<number>>;
 }
+
+export interface RaceInfo {
+    round: string;
+    raceName: string;
+    circuitName: string;
+    circuitId: string;
+}
