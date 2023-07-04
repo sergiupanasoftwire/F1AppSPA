@@ -45,10 +45,10 @@ export default function RoundDetails() {
         <div>
             <div>
                 <h1>
-                    Season {params.season} Round {params.roundId}
+                    Season TODO
                 </h1>
                 <h2>
-                    Circuit name: {data?.MRData.RaceTable.Races[0]}
+                    Circuit name: TODO
                 </h2>
                 <h2>
                     Race name:
