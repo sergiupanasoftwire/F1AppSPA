@@ -18,3 +18,25 @@ export interface RaceInfo {
     circuitName: string;
     circuitId: string;
 }
+
+export interface RaceDetails {
+    info: RaceInfo;
+    standings: Result[];
+    circuitImage: string;
+}
+
+export interface Result {
+    position: string;
+    points: string;
+    startingPosition: string;
+    driver: Driver;
+}
+
+export interface Driver {
+    firstName: string;
+    lastName: string;
+    code: string;
+    number: string;
+    nationality: string;
+    constructor: string;
+}
